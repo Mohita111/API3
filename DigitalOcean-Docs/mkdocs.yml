@@ -1,0 +1,44 @@
+site_name: DigitalOcean Solutions Docs
+site_author: Cloud Engineering Team
+
+theme:
+  name: material
+  palette:
+    # Light mode matching the classic DigitalOcean branding
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode matching your IDE workspace theme
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+
+# Navigation mapping to match image_ec7446.png file explorer
+nav:
+  - Welcome: index.md
+  - Core Integrations:
+    - Bitwarden Deployment: Bitwarden.md
+    - Storage with CSI for S3: CSI for S3.md
+    - Observability via OpenLIT: OpenLIT.md
+    - Database Cluster with Pangolin (CE): Pangolin (CE).md
